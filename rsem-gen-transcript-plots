@@ -38,11 +38,11 @@ build_t2gmap <- function(filename) {
   t2gmap <- list()
 
   nrow <- dim(data)[1]
-  ncol <- dim(data)[2]
-
+  ncol <- 2 # lookup coloumn for gene_id is fixed
+  
   gene_id <- ""
   tids <- c()
-  for (i in 1:nrow) {
+  for (i in 2:nrow) {   # first row of isoforms.results is header, start at 2
     if (gene_id != data[i, ncol]) {
       if (gene_id != "") { 
         t2gmap[[gene_id]] <- tids
