@@ -38,7 +38,7 @@ build_t2gmap <- function(filename) {
   t2gmap <- list()
 
   nrow <- dim(data)[1]
-  ncol <- 2 # lookup coloumn for gene_id is fixed
+  ncol <- 2 # lookup column for gene_id is fixed
   
   gene_id <- ""
   tids <- c()
